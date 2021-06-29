@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audioartist</title>
+    <link rel="shortcut icon" type="image/jpg" href="icon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <header>
+    <a href="#" class="logo"></a>
+        <ul class="navigation">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#draw">Draw</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+        <h2>audioartist</h2>
+        <p>Create unique images from your favourite songs</p>
+        <a href='#draw' class='btn'>Get Started</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="aboutTitle">About audioartist</h2>
+                <p>audioartist intends to combine art, technology and music by creating unique patterns based on a songs characteristics. Every song is unique in relation to
+                their individual audio features, such as tempo, key and duration. audioartist attempts to display this by visually representating a song, creating unique pieces of art 
+                through these unique traits. No two pieces of art will ever be the same. <ul>This project is still a work in progress.</ul></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="draw" id="draw">
+        <div class="title">
+            <h2 class="drawTitle">Choose a song</h2>
+            <p>Choose the artist from the drop down menu.</p>
+            <p>Choose the desired album and click the song list button.</p>
+            <p>Select the song from the list and click the draw button.</p>
+        </div>
+        <div class="container">        
+            <form action="" class="center">
+                <input type="hidden" id='hidden_token'>
+
+                <!--<div>
+                    <input type="text" placeholder ="" id="userinput">
+                    <button type="submit" onclick="myfunc()" id="demo">Search</button>
+                </div>-->
+
+                <div class="artist">
+                    <label for="Artist" class="form-label col-sm-1 text-light">Artist:</label>
+                    <select name="" id="select_artist" class="form-control form-control-sm col-sm-12">
+                        <option>Select...</option>                    
+                    </select>
+                </div>
+
+                <div class="album">
+                    <label for="Album" class="form-label col-sm-2 pt-3 text-light">Album:</label>
+                    <select name="" id="select_album" class="form-control form-control-sm col-sm-12">
+                        <option>Select...</option>                    
+                    </select>
+                </div>    
+
+                <!--<div class="song">
+                    <label for="Genre" class="form-label col-sm-2 pt-3 text-light">Song:</label>
+                    <select name="" id="select_track" class="form-control form-control-sm col-sm-12">
+                        <option>Select...</option>                    
+                    </select>
+                </div>-->
+                
+                <div class="list">
+                    <div class="searchBtn pt-4">
+                        <button type="submit" id="btn_submit" class="btn">Song List</button>
+                    </div>   
+                </div>      
+            </form>        
+            <div class="list2">
+                <div class="col-sm-4 p-4">
+                    <div class="list-group song-list">             
+                </div>
+                <div class="offset-md-1 col-sm-4" id="song-detail">                
+                </div>
+            </div>
+              
+        </div>
+        <div class="draw">
+            <a href="draw.html" class="btn">Draw</a>  
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <footer class="footer-distributed">
+            <div class="footer-right">
+                <a href="https://github.com/sam-stokes" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/TechStokes" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="mailto:sam_stokes@outlook.com"><i class="fa fa-paper-plane"></i></a>
+            </div>
+
+            <div class="footer-left">
+                <p class="footer-links">
+                    <p>Sam Stokes &copy; 2021</p>
+                </p>
+            </div>
+        </footer>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>
