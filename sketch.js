@@ -57,7 +57,7 @@ var
     freeze = false,
     totalLength = 0,
 
-    brightness = 3,
+    brightness,
     livespeed = 1,
     nolivespeed = 10,
     speed = nolivespeed,
@@ -82,6 +82,16 @@ var canvas = document.getElementById("theBitmap"),
     ctxb = canvasb.getContext("2d"),
     W=960, H=960, bw = 480, bh = 480;
 
+canvas.width = W*M;
+canvas.height = H*M;
+canvas2.width = W*M;
+canvas2.height = H*M;
+canvas3.width = W*M;
+canvas3.height = H*M;
+canvasb.width = bw;
+canvasb.height = bh;
+canvasb.style.width = "240px";
+canvasb.style.height = "240px";
 
 function onResize() {
 
@@ -107,6 +117,17 @@ function onResize() {
 onResize();
 
 ctx2.globalCompositeOperation = 'screen';
+
+function alphafillcanvas( ctx, a ) {
+    var imgd = ctx.getImageData(0, 0, W*M, H*M),
+        pix = imgd.data;
+
+    for (var i = 0, n = pix.length; i <n; i += 4) {
+        pix[i + 3] = pix[i + 3] * a;
+    }
+
+    ctx.putImageData(imgd, 0, 0);
+}
 
 function alphafillcanvas( ctx ) {
     var imgd = ctx.getImageData(0, 0, W*M, H*M),
@@ -417,7 +438,7 @@ function renderCanvasPrecisionPolarText( ctx, tdata, textB, pixH, plotAngle, sc,
 }
 
 function titleText() {
-    var tdata = makeText("- audioartist -", 5);
+    var tdata = makeText("*- audioartist -*", 5);
     textH = 2*M;
     textB = 440*M,
         plotAngle = 180/(textB*Math.PI/textH);

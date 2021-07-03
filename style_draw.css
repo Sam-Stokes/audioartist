@@ -47,10 +47,7 @@ canvas {
 }
 #canvas-wrapper {
     position: absolute;
-    top: 0px;
-    left: 325px;
-    right: 0px;
-    bottom: 0px;
+    left: 25%;
     overflow: visible;
 }
 
