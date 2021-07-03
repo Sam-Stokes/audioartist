@@ -6,6 +6,6 @@ If the drawing appears too small for your resolution, please zoom in on the draw
 
 Future development:
 * Enable search for artist feature
-* Configure canvas to resize for different screen resolutions
+~~* Configure canvas to resize for different screen resolutions~~
 * Cosmetic adjustments 
 * Cross-platform functionality 
